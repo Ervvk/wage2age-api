@@ -12,6 +12,7 @@ router.route("/").get((req, res) => {
 });
 
 router.route("/offers").get((req, res) => {
+  console.log("test");
   dboperations.getOffers().then((result) => {
     if (result) {
       res.json(result);
