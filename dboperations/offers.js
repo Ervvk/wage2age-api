@@ -3,6 +3,7 @@ const sql = require("mssql");
 
 const getOffers = async () => {
   try {
+    console.log("works");
     let pool = await sql.connect(config);
     let offers = await pool.request().query("SELECT * FROM getActiveOffers");
 
