@@ -7,7 +7,8 @@ const getOffers = async () => {
     let pool = await sql.connect(config);
     let offers = await pool.request().query("SELECT * FROM getActiveOffers");
 
-    return offers.recordset;
+    //return offers.recordset;
+    return offers;
   } catch (error) {
     console.log(error);
   }
