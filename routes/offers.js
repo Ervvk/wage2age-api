@@ -14,7 +14,7 @@ router.route("/").get((req, res) => {
 router.route("/offers").get((req, res) => {
   console.log("test");
   dboperations.getOffers().then((result) => {
-    res.json(result);
+    res.json("chomik");
     if (result) {
       res.json(result);
     } else {
