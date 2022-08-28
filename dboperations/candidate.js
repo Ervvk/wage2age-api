@@ -2,7 +2,6 @@ const config = require("./dbconfig");
 const sql = require("mssql");
 
 const getCandidatesApps = async (candidateID) => {
-  console.log("works");
   try {
     if (candidateID === "undefined") throw new Error("Undefined candidate");
     let pool = await sql.connect(config);
@@ -16,4 +15,5 @@ const getCandidatesApps = async (candidateID) => {
     console.error(error);
   }
 };
+
 module.exports = { getCandidatesApps: getCandidatesApps };

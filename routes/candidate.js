@@ -1,5 +1,4 @@
 const express = require("express");
-
 const dboperations = require("../dboperations/candidate");
 const router = express.Router();
 

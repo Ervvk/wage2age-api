@@ -8,7 +8,6 @@ const getUsers = async () => {
   try {
     let pool = await sql.connect(config);
     let users = await pool.request().query("SELECT * FROM Users");
-
     return users.recordset;
   } catch (error) {
     console.log(error);

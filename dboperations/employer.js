@@ -31,11 +31,9 @@ const getOfferCandidates = async (offerID) => {
 
 const updateJobAppState = async ({ appID, stateID }) => {
   try {
-    console.log(appID, stateID);
     let pool = await sql.connect(config);
 
     //implement check if record exists
-
     await pool
       .request()
       .input("JobAppStateID", stateID)

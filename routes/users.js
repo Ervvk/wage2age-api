@@ -1,7 +1,7 @@
 const express = require("express");
-
 const dboperations = require("../dboperations/users");
 const router = express.Router();
+
 router.use((req, res, next) => {
   console.log("middleware");
   next();
