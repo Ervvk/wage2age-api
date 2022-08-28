@@ -7,6 +7,10 @@ router.use((req, res, next) => {
   next();
 });
 
+router.route("/").get((req, res) => {
+  res.json("Wage api");
+});
+
 router.route("/offers").get((req, res) => {
   dboperations.getOffers().then((result) => {
     if (result) {
