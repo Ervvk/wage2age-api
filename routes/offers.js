@@ -8,6 +8,7 @@ router.use((req, res, next) => {
 });
 
 router.route("/").get((req, res) => {
+  //testing purposes endpoint
   res.json("Wage api");
 });
 
@@ -17,16 +18,6 @@ router.route("/offers").get((req, res) => {
       res.json(result);
     } else {
       res.status(404).send("Failed to load offers");
-    }
-  });
-});
-
-router.route("/offer/:offerID").get((req, res) => {
-  dboperations.getOfferByID(req.params.offerID).then((result) => {
-    if (result) {
-      res.json(result);
-    } else {
-      res.status(404).send("Failed to load offer");
     }
   });
 });

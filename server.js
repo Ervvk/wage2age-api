@@ -3,7 +3,6 @@ const bodyParser = require("body-parser");
 
 const cors = require("cors");
 const app = express();
-const router = express.Router();
 
 const usersRoutes = require("./routes/users");
 const offersRoutes = require("./routes/offers");
